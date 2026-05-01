@@ -184,16 +184,17 @@ footer ul {
 
 /*** Responsive */
 
+/*** Responsive */
+
 @media (max-width: 768px) {
-    /* 1. Pasamos los contenedores principales de fila a columna */
+
     section > div,
     #card-section > div,
     footer {
         flex-direction: column;
-        align-items: center; /* Centramos el contenido apilado */
+        align-items: center; 
     }
 
-    /* 2. Hacemos que las tarjetas, formulario, info de contacto y bloques del footer ocupen todo el ancho disponible */
     .card,
     .formulario,
     .contacto,
@@ -201,23 +202,66 @@ footer ul {
         width: 100%;
     }
 
-    /* 3. Ajustes de legibilidad y espaciado (Cards y Contacto) */
     .card {
-        margin: 15px 0; /* Damos margen arriba y abajo para que no se peguen */
+        margin: 12px 0; 
     }
 
     .contacto {
-        text-align: center; /* Pasamos de alineación derecha a centrada para mejor lectura en vertical */
-        padding-top: 0; /* Quitamos el padding superior excesivo */
+        text-align: center; 
+        padding-top: 0;
     }
 
-    /* 4. Ajustes del Footer y Navegación */
+    
     footer > div {
-        margin-bottom: 20px; /* Separación entre el menú del footer y el newsletter */
+        margin-bottom: 20px;
         text-align: center;
     }
 
     nav ul {
-        justify-content: center; /* Centramos los enlaces de navegación arriba */
+        justify-content: center; 
+    }
+}
+
+@media (max-width: 450px) {
+    /* 1. Reducimos los paddings generales para aprovechar el espacio reducido */
+    section,
+    footer {
+        padding: 20px 15px;
+    }
+
+    /* 2. Reducimos los márgenes internos del formulario para que no se aprieten los inputs */
+    .formulario,
+    .contacto {
+        padding: 15px 0;
+    }
+
+    form {
+        padding: 20px 15px;
+    }
+
+    /* 3. Achicamos un poco los títulos para evitar que se salgan de la pantalla */
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .bg-header h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    /* 4. Ajuste preventivo en la navegación por si los enlaces no caben en una sola línea */
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Permite que los enlaces bajen de renglón si no hay espacio */
+        gap: 5px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 5px;
     }
 }
