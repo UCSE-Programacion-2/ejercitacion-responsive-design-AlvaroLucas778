@@ -222,14 +222,17 @@ footer ul {
     }
 }
 
+
+
+
 @media (max-width: 450px) {
-    /* 1. Reducimos los paddings generales para aprovechar el espacio reducido */
+  
     section,
     footer {
         padding: 20px 15px;
     }
 
-    /* 2. Reducimos los márgenes internos del formulario para que no se aprieten los inputs */
+  
     .formulario,
     .contacto {
         padding: 15px 0;
@@ -239,7 +242,7 @@ footer ul {
         padding: 20px 15px;
     }
 
-    /* 3. Achicamos un poco los títulos para evitar que se salgan de la pantalla */
+    
     h2 {
         font-size: 1.6rem;
     }
@@ -250,18 +253,25 @@ footer ul {
         padding: 0 15px;
     }
 
-    /* 4. Ajuste preventivo en la navegación por si los enlaces no caben en una sola línea */
+  
     nav {
-        padding: 10px;
+        padding: 10px 0;
     }
 
     nav ul {
-        flex-wrap: wrap; /* Permite que los enlaces bajen de renglón si no hay espacio */
-        gap: 5px;
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px; 
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
     }
 
     nav ul li a {
-        font-size: 0.9rem;
-        padding: 5px;
+        display: block; 
+        padding: 10px;
+        font-size: 1rem;
     }
 }
