@@ -184,3 +184,94 @@ footer ul {
 
 /*** Responsive */
 
+/*** Responsive */
+
+@media (max-width: 768px) {
+
+    section > div,
+    #card-section > div,
+    footer {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .card,
+    .formulario,
+    .contacto,
+    footer > div {
+        width: 100%;
+    }
+
+    .card {
+        margin: 12px 0; 
+    }
+
+    .contacto {
+        text-align: center; 
+        padding-top: 0;
+    }
+
+    
+    footer > div {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center; 
+    }
+}
+
+
+
+
+@media (max-width: 450px) {
+  
+    section,
+    footer {
+        padding: 20px 15px;
+    }
+
+  
+    .formulario,
+    .contacto {
+        padding: 15px 0;
+    }
+
+    form {
+        padding: 20px 15px;
+    }
+
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .bg-header h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+  
+    nav {
+        padding: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px; 
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block; 
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
